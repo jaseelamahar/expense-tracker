@@ -1,0 +1,19 @@
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border: 1px solid black;
+    padding: 10px;
+    width: 300px;
+    margin: 20px auto;
+  }
+  
+  .form-account {
+    border: 1px solid black; /* Black border for account section */
+  margin-top: 10px; /* Space between form and account section */
+  padding: 5px; /* Space inside the box */
+  width: 300px; /* Match width of form-container */
+  margin-left: auto; /* Center horizontally */
+  margin-right: auto; /* Center horizontally */
+  }
+  
