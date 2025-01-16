@@ -1,11 +1,11 @@
-import React, { useState, useRef } from 'react';
+import React, {  useRef } from 'react';
 import './SignUp.css';
 
 const SignUp = () => {
   const emailInputRef = useRef();
   const passwordInputRef = useRef();
 
-  const [isSignin, setIsSignin] = useState(false);
+  
 
   const submitHandler = (event) => {
     event.preventDefault();
