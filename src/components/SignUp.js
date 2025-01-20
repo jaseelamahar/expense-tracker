@@ -14,7 +14,7 @@ const SignUp = () => {
 
     // Sign-up request
     fetch(
-      'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyDXR_hL2qdUhRdZzUOsGxoW_gIEn3o90h0',
+      'https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=AIzaSyA-c6Dg8OhFXdKPptqWnwwSvJDl6Nv8btc',
       {
         method: 'POST',
         body: JSON.stringify({
