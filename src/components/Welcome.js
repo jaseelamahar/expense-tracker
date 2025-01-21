@@ -5,6 +5,7 @@ import { AuthContext } from "./auth-context";
 import { useContext } from 'react';
 
 const WelcomeScreen = () => {
+  
   const { logout } = useContext(AuthContext);
   const history=useHistory()
 
