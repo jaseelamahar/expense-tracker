@@ -6,6 +6,7 @@ import SignUp from './components/SignUp';
 import Welcome from './components/Welcome';
 import UpdateProfilePage from './components/UpdateProfilePage';
 import {AuthContextProvider} from "./components/auth-context";
+import DailyExpense from './components/DailyExpenses';
 
 const App = () => {
   return (
@@ -26,9 +27,10 @@ const App = () => {
         <Route path="/signup" component={SignUp} />
         <Route path="/welcome" component={Welcome} />
         <Route path="/updateprofile" component={UpdateProfilePage}/>
-      
+        <Route path="/expense"  component={DailyExpense}/>
       </Switch>
     </Router>
+
     </AuthContextProvider>
   );
 };

@@ -1,5 +1,6 @@
 import "./Login.css";
 import React, { useRef, useState } from "react";
+import DailyExpenses from "./DailyExpenses"
 
 const Login = () => {
   const emailInputRef = useRef();
@@ -7,6 +8,7 @@ const Login = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [isForgotPassword, setIsForgotPassword] = useState(false); // Toggle form view
   const [message, setMessage] = useState("");
+  const [isLoggedIn,setIsLoggedIn]=useState(false)
 
   // Submit handler for login
   const submitHandler = (e) => {
@@ -46,6 +48,7 @@ const Login = () => {
       .then((data) => {
         localStorage.setItem("token", data.idToken);
         localStorage.setItem("userEmailId", data.email);
+        setIsLoggedIn(true)
         alert("Login successful!");
       })
       .catch((err) => {
@@ -95,6 +98,9 @@ const Login = () => {
         alert("An error occurred. Please try again.");
       });
   };
+  if (isLoggedIn) {
+    return <DailyExpenses />
+  }
 
   return (
     <div>
