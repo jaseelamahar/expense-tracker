@@ -7,6 +7,12 @@ import { AuthContext } from './auth-context'
 const UpdateProfilePage = () => {
   const authCtx = useContext(AuthContext);
   const history = useHistory();
+  const { logout } = useContext(AuthContext);
+
+const logoutHandler = () => {
+  logout();
+  history.replace("/login"); // Redirect to login screen
+};
 
   const [userData, setUserData] = useState({ displayName: '', photoUrl: '' });
 
@@ -130,6 +136,7 @@ const UpdateProfilePage = () => {
         <p>Loading...</p> 
       )}
       <button type='button' onClick={() => history.push('/')}>Cancel</button>
+      <button onClick={logoutHandler}>Log Out</button>
     </>
   );
 };

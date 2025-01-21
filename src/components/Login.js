@@ -2,7 +2,10 @@ import "./Login.css"
 import React, { useRef, useState } from "react";
 import { useHistory } from "react-router-dom";
 
+
 const Login = () => {
+
+
   const emailInputRef = useRef();
   const passwordInputRef = useRef();
   const [isLoading, setIsLoading] = useState(false);
@@ -50,6 +53,8 @@ const Login = () => {
       .catch((err) => {
         console.error(err);
       });
+
+      
   };
 
   return (
@@ -78,7 +83,10 @@ const Login = () => {
         <div className="account">
           Don't have an account?<button>SignUp</button>
         </div>
+
       </form>
+     
+      
     </div>
   );
 };
