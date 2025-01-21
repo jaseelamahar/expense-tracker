@@ -12,9 +12,9 @@ export const AuthContextProvider = (props) => {
   const [token, setToken] = useState(null);
 
   useEffect(() => {
-    // Check for the token on initial load
+    
     const storedToken = localStorage.getItem("token");
-    console.log("Stored Token: ", storedToken);
+    //console.log("Stored Token: ", storedToken);
     if (storedToken) {
       setToken(storedToken);
     }

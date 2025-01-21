@@ -1,5 +1,5 @@
 import "./Login.css";
-import React, { useRef, useState } from "react";
+import React, { useRef, useState,useEffect } from "react";
 import DailyExpenses from "./DailyExpenses"
 
 const Login = () => {
@@ -9,6 +9,13 @@ const Login = () => {
   const [isForgotPassword, setIsForgotPassword] = useState(false); // Toggle form view
   const [message, setMessage] = useState("");
   const [isLoggedIn,setIsLoggedIn]=useState(false)
+
+  useEffect(() => {
+    const token = localStorage.getItem("token");
+    if (token) {
+      setIsLoggedIn(true);
+    }
+  }, []);
 
   // Submit handler for login
   const submitHandler = (e) => {
